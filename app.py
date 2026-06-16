@@ -35,5 +35,8 @@ def translate():
 
     return render_template('transalator.html', translated=translated, audio_file=audio_file)
 
+
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
